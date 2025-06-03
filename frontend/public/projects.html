@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TaskTracker - My Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<div class="page-wrapper">
+    <!-- HEADER -->
+    <header>
+        <div class="logo">TaskTracker</div>
+        <div class="nav-buttons">
+            <!-- Filled by common.js (Dashboard, Projects, Tasks, Logout) -->
+        </div>
+    </header>
+
+    <!-- PROJECTS LIST CARD -->
+    <div class="container">
+        <div class="card card-table">
+            <h2>My Projects</h2>
+            <div id="errorMsg" class="error" style="display:none;"></div>
+
+            <button id="createProjectBtn" class="primary-btn">+ Create New Project</button>
+
+            <table style="margin-top:1rem;">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Created At</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="projectList">
+                <!-- Populated by projects.js -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/projects.js"></script>
+</body>
+</html>

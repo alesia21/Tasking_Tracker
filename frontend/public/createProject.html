@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TaskTracker - Create Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<div class="page-wrapper">
+    <!-- HEADER -->
+    <header>
+        <div class="logo">TaskTracker</div>
+        <div class="nav-buttons">
+            <!-- Filled by common.js -->
+        </div>
+    </header>
+
+    <!-- CREATE PROJECT CARD -->
+    <div class="container">
+        <div class="card">
+            <h2>Create Project</h2>
+            <div id="errorMsg" class="error" style="display:none;"></div>
+            <form id="createProjectForm">
+                <label for="name">Project Name</label>
+                <input type="text" id="name" placeholder="Enter project name" required minlength="3" />
+
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="Enter description (optional)"></textarea>
+
+                <button type="submit" class="primary-btn">Create</button>
+                <button type="button" id="cancelBtn">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/createProject.js"></script>
+</body>
+</html>

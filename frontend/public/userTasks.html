@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TaskTracker - My Assigned Tasks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<div class="page-wrapper">
+    <!-- HEADER -->
+    <header>
+        <div class="logo">TaskTracker</div>
+        <div class="nav-buttons">
+            <!-- Filled by common.js -->
+        </div>
+    </header>
+
+    <!-- USER TASKS CARD -->
+    <div class="container">
+        <div class="card card-table">
+            <h2>My Assigned Tasks</h2>
+            <div id="errorMsg" class="error" style="display:none;"></div>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Project</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Priority</th>
+                    <th>Due Date</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="userTasksBody">
+                <!-- Populated by userTasks.js -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/userTasks.js"></script>
+</body>
+</html>

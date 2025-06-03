@@ -1,0 +1,198 @@
+/* styles.css */
+
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Full‐page purple gradient background */
+.page-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6A5ACD 0%, #836FFF 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER: white with slight transparency, rounded corners */
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4B0082;
+    margin-bottom: 0.5rem;
+}
+
+/* Nav buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-buttons button {
+    background: none;
+    border: 2px solid #4B0082;
+    border-radius: 20px;
+    color: #4B0082;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    background-color: #4B0082;
+    color: #fff;
+}
+
+/* White “card” container in the middle */
+.container {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 360px;          /* Forms/pages: 360px wide */
+    max-width: 100%;
+    padding: 2rem;
+}
+
+/* For pages with tables/lists, make the card wider */
+.card-table {
+    width: 800px;          /* Adjust as needed */
+    max-width: 100%;
+}
+
+/* Headings inside cards */
+.card h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Labels and inputs */
+.card label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.card input[type="text"],
+.card input[type="email"],
+.card input[type="password"],
+.card input[type="date"],
+.card select,
+.card textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Buttons */
+/* Primary (gradient) */
+.primary-btn {
+    background: linear-gradient(90deg, #6A5ACD, #836FFF);
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.primary-btn:hover {
+    opacity: 0.9;
+}
+
+/* Secondary (outlined) */
+.card button:not(.primary-btn) {
+    background: none;
+    border: 2px solid #4B0082;
+    border-radius: 20px;
+    color: #4B0082;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.card button:not(.primary-btn):hover {
+    background-color: #4B0082;
+    color: #fff;
+}
+
+/* Error messages */
+.error {
+    color: red;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.filter‐form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Links */
+a {
+    color: #6A5ACD;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

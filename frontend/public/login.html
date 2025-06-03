@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TaskTracker - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<div class="page-wrapper">
+    <!-- HEADER -->
+    <header>
+        <div class="logo">TaskTracker</div>
+        <div class="nav-buttons">
+            <!-- Filled by common.js (Login/Register) -->
+        </div>
+    </header>
+
+    <!-- LOGIN CARD -->
+    <div class="container">
+        <div class="card">
+            <h2>Login</h2>
+            <div id="errorMsg" class="error" style="display:none;"></div>
+            <form id="loginForm">
+                <label for="userId">User ID</label>
+                <input type="text" id="userId" placeholder="Enter your User ID" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" required />
+
+                <!-- Note: your backend does not check password (no Spring Security). We just verify user exists by ID. -->
+                <button type="submit" class="primary-btn">Login</button>
+            </form>
+            <div style="margin-top: 1rem; text-align: center;">
+                Don't have an account? <a href="/register.html">Register here</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/login.js"></script>
+</body>
+</html>

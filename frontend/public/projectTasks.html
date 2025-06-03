@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TaskTracker - Project Tasks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<div class="page-wrapper">
+    <!-- HEADER -->
+    <header>
+        <div class="logo">TaskTracker</div>
+        <div class="nav-buttons">
+            <!-- Filled by common.js -->
+        </div>
+    </header>
+
+    <!-- PROJECT TASKS CARD -->
+    <div class="container">
+        <div class="card card-table">
+            <h2 id="projectNameHeading">Tasks for “…”</h2>
+            <div id="errorMsg" class="error" style="display:none;"></div>
+
+            <button id="backToProjects">← Back to Projects</button>
+            <button id="createTaskBtn" class="primary-btn">+ Create New Task</button>
+
+            <!-- SEARCH -->
+            <div class="filter‐form">
+                <label for="searchInput">Search Tasks:</label>
+                <input type="text" id="searchInput" placeholder="Enter keyword..." />
+                <button id="applySearchBtn">Search</button>
+            </div>
+
+            <!-- STATUS FILTER -->
+            <div class="filter‐form">
+                <label for="statusFilter">Filter by status:</label>
+                <select id="statusFilter">
+                    <option value="">All</option>
+                    <option value="TODO">TODO</option>
+                    <option value="IN_PROGRESS">IN_PROGRESS</option>
+                    <option value="COMPLETED">COMPLETED</option>
+                </select>
+                <button id="applyFilterBtn">Apply</button>
+            </div>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Priority</th>
+                    <th>Due Date</th>
+                    <th>Assignee</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="tasksBody">
+                <!-- Populated by projectTasks.js -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/projectTasks.js"></script>
+</body>
+</html>

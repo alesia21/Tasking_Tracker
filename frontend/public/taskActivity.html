@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TaskTracker - Task Activity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<div class="page-wrapper">
+    <!-- HEADER -->
+    <header>
+        <div class="logo">TaskTracker</div>
+        <div class="nav-buttons">
+            <!-- Filled by common.js -->
+        </div>
+    </header>
+
+    <!-- TASK ACTIVITY CARD -->
+    <div class="container">
+        <div class="card card-table">
+            <h2 id="activityHeading">Task Activity</h2>
+            <div id="errorMsg" class="error" style="display:none;"></div>
+
+            <button id="backBtn">← Back</button>
+
+            <table style="margin-top:1rem;">
+                <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Action</th>
+                    <th>Performed By</th>
+                    <th>Details</th>
+                </tr>
+                </thead>
+                <tbody id="activityBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/taskActivity.js"></script>
+</body>
+</html>
