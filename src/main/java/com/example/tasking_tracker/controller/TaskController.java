@@ -43,7 +43,11 @@ public class TaskController {
         Task task = taskService.getTaskById(id);
         return ResponseEntity.ok(task);
     }
-
+    @GetMapping("/users/{userId}/tasks")
+    public ResponseEntity<List<Task>> getTasksByUser(@PathVariable Long userId) {
+        List<Task> tasks = taskService.getTasksByAssignee(userId);
+        return ResponseEntity.ok(tasks);
+    }
 
     @GetMapping("/api/projects/{projectId}/tasks")
     public ResponseEntity<List<Task>> getAllTasksInProject(
@@ -59,18 +63,8 @@ public class TaskController {
         return ResponseEntity.ok(content);
     }
 
-    /**
-     * PUT /api/tasks/{id}
-     * Update an existing task’s fields. JSON body:
-     * {
-     *   "title": "...",
-     *   "description": "...",         // optional
-     *   "status": "IN_PROGRESS",
-     *   "priority": "HIGH",
-     *   "dueDate": "2025-06-20",
-     *   "assignee": { "id": 2 }       // optional (if reassignment is needed)
-     * }
-     */
+
+
     @PutMapping("/api/tasks/{id}")
     public ResponseEntity<Task> updateTask(
             @PathVariable Long id,

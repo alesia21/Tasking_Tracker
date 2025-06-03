@@ -6,5 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProjectRepository extends JpaRepository<Project, Long> {
-    // You can add custom query methods here if needed (e.g., findByOwnerId)
+
 }
+//Project is the entity type
+//by extending JpaRepository we get methods like save() ; findbyid()  ; findAll() ;deletebyid () and so on.

@@ -2,6 +2,7 @@ package com.example.tasking_tracker.entity;
 
 import com.example.tasking_tracker.entity.Project;
 import com.fasterxml.jackson.annotation.JsonIgnore; //using json ignore to prevent serialization of certain fields in order to avoid infinite loops.
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;//jpa annotation for mapping
 import jakarta.validation.constraints.*;//validation api for input constraint
 //lombok annotation to generate constructor with all the fields
@@ -20,6 +21,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor//lombok generating a constructor with arguments for all fields.
 @Builder//building an inner static class build containing the methods for setting all the fields and a build method to create an instance of the class
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class User {
 
     @Id//denoting the primary key of the entity user

@@ -14,21 +14,23 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Repository
-public interface TaskRepository extends JpaRepository<Task, Long>, JpaSpecificationExecutor {
+public interface TaskRepository extends JpaRepository<Task, Long>, JpaSpecificationExecutor { //Supproting for dynamic Specification queries.
 
-    // 1) Find all tasks in a given project (paginated)
+    // Find all tasks in a given project (paginated)
     Page<Task> findByProjectId(Long projectId, Pageable pageable);
 
-    List<Task> findByAssigneeId(Long userId);
+   List<Task> findByAssigneeId(Long userId);
 
-    // 2) Find all tasks in a given project filtered by TaskStatus (paginated)
+    //  Find all tasks in a given project filtered by TaskStatus (paginated)
     Page<Task> findByProjectIdAndStatus(Long projectId, TaskStatus status, Pageable pageable);
 
-    // 3) Find all tasks that are due on a specific date (paginated)
+    // 3Find all tasks that are due on a specific date (paginated)
     Page<Task> findByDueDate(LocalDate dueDate, Pageable pageable);
 
-    // 4) Find all tasks assigned to a specific user (paginated)
+    //  Find all tasks assigned to a specific user (paginated)
     Page<Task> findByAssigneeId(Long userId, Pageable pageable);
+
+    //Find tasks by the assignee’s username AND the project’s name
     @Query("SELECT t FROM Task t WHERE t.assignee.username = :username AND t.project.name = :projectName")
     List<Task> findTasksByAssigneeUsernameAndProjectName(@Param("username") String username,
                                                          @Param("projectName") String projectName);
